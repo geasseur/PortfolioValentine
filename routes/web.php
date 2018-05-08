@@ -20,6 +20,8 @@ route::get('/apropos', function(){
 
 //illustration
 
+Route::get('/illustrations','IllustrationController@displayIllustrations')->name('illustrations.display');
+
 Route::post('/illustrations','IllustrationController@displayIllustrations')->name('illustrations.display');
 
 route::post('/illustration/newIllustration', 'IllustrationController@addIllustration')->name('illustration.newIllustration');

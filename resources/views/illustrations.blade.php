@@ -14,7 +14,7 @@
 @endif
 <section class='col-12'>
   <h2>Ajouter nouvelles video</h2>
-  <form class="d-flex flex-column align-items-center card" action="{{ route('illustration.newIllustration') }}" method="post">
+  <form enctype="multipart/form-data" class="d-flex flex-column align-items-center card" action="{{ route('illustration.newIllustration') }}" method="post">
     {{csrf_field()}}
     <label>nom de l'image</label>
     <input type="text" name="name" value="" placeholder="limité à 30 caractere">
@@ -23,9 +23,9 @@
     <label>type de l'image</label>
     <select class="" name="typeImage">
       <option value="">Sélectionnez un type d'image'</option>
-      <option value="dessin">Dessin</option>
+      <option value="illustration">Illustration</option>
       <option value="3D">3D</option>
-      <option value="croquis">Croquis</option>
+      <option value="dessins">Dessin</option>
       <option value="photo">Photo</option>
     </select>
     <label>rentrez le fichier</label>

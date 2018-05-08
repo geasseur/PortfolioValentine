@@ -55,11 +55,7 @@ return [
             'visibility' => 'public',
         ],
 
-        'illustrations' => [
-            'driver' => 'local',
-            'root'   => public_path(). '/illustration',
-        ],
-
+        // video
         'animations2D' => [
             'driver' => 'local',
             'root'   => public_path(). '/video/2D',
@@ -75,24 +71,26 @@ return [
             'root'   => public_path(). '/video/live',
         ],
 
+
+        // illustration
         'illustration' => [
             'driver' => 'local',
-            'root'   => public_path(). '/img/dessins',
+            'root'   => public_path(). '/img/illustrations/illustration',
         ],
 
         'illustration3D' => [
             'driver' => 'local',
-            'root'   => public_path(). '/img/3D',
+            'root'   => public_path(). '/img/illustrations/3D',
         ],
 
-        'croquis' => [
+        'dessin' => [
             'driver' => 'local',
-            'root'   => public_path(). '/img/croquis',
+            'root'   => public_path(). '/img/illustrations/dessins',
         ],
 
         'photo' => [
             'driver' => 'local',
-            'root'   => public_path(). '/img/photos',
+            'root'   => public_path(). '/img/illustrations/photo',
         ],
 
         's3' => [
