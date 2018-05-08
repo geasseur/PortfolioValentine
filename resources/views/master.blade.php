@@ -4,92 +4,62 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
+        <title>PortFolio Valentine</title>
+        <script type="text/javascript" src="{{URL::asset('js/file.js')}}"></script>
+        <script type="text/javascript" src="{{URL::asset('js/cv.js')}}"></script>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
+    <body onload="chargementCV()">
+      <header class='container d-flex justify-content-between align-items-center mt-2 mb-2 bg-warning'>
+      <h1 class=''>Valentine Ventura</h1>
+      <section>
+        <a href="{{route('display.cv')}}">À propos |</a>
+        <a href="{{ route('display.contact') }}">contact</a>
+      </section>
+      </header>
+      <main class='container d-flex justify-content-between align-items-start bg-faded'>
+        <section class='d-flex justify-content-around align-items-center flex-wrap'>
+          @yield('content')
+        </section>
+        <aside class="">
+          <section class='rubrique'>
+            <form class="" action="{{ route('illustrations.display')}}" method="post">
+              {{csrf_field()}}
+              <input class='btnRubrique' type="submit" name="" value="Illustration">
+            </form>
+          </section>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+          <section class='rubrique'>
+            <form class="" action="{{ route('animations.display')}}" method="post">
+              {{csrf_field()}}
+              <input class='btnRubrique' type="submit" name="" value="Animation">
+            </form>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
+          </section>
+
+          <section class='rubrique'>
+            <form class="" action="" method="post">
+              {{csrf_field()}}
+              <input type="submit" name="" value="Scenatio/BD">
+            </form>
+          </section>
+
+          <section class='rubrique'>
+            <form class="" action="" method="post">
+              {{csrf_field()}}
+              <input type="submit" name="" value="Working Progress">
+            </form>
+          </section>
+        </aside>
+      </main>
+      <footer class='container d-flex justify-content-between align-items-center mt-2 mb-2 bg-danger'>
+        <a href="#">facebook</a>
+        <a href="#">Tumblr</a>
+      </footer>
     </body>
 </html>

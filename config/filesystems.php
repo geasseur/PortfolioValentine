@@ -55,6 +55,46 @@ return [
             'visibility' => 'public',
         ],
 
+        'illustrations' => [
+            'driver' => 'local',
+            'root'   => public_path(). '/illustration',
+        ],
+
+        'animations2D' => [
+            'driver' => 'local',
+            'root'   => public_path(). '/video/2D',
+        ],
+
+        'animations3D' => [
+            'driver' => 'local',
+            'root'   => public_path(). '/video/3D',
+        ],
+
+        'animationsLive' => [
+            'driver' => 'local',
+            'root'   => public_path(). '/video/live',
+        ],
+
+        'illustration' => [
+            'driver' => 'local',
+            'root'   => public_path(). '/img/dessins',
+        ],
+
+        'illustration3D' => [
+            'driver' => 'local',
+            'root'   => public_path(). '/img/3D',
+        ],
+
+        'croquis' => [
+            'driver' => 'local',
+            'root'   => public_path(). '/img/croquis',
+        ],
+
+        'photo' => [
+            'driver' => 'local',
+            'root'   => public_path(). '/img/photos',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

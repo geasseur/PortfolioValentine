@@ -1,0 +1,35 @@
+/* style page index */
+
+.rubrique{
+  margin: 10px 0;
+}
+
+.btnRubrique{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: black;
+}
+
+main>aside{
+  border: 1px solid black;
+  width: 25%;
+}
+
+.rubrique>form{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* style page illustration */
+
+.imgIllustration{
+  width: 50%;
+}
+
+.edition{
+  display: none;
+}
